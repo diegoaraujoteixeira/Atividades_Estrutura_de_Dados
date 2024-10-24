@@ -1,6 +1,6 @@
 import java.util.Scanner;
 public class Ex5 {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         try {
             System.out.println("Digite o primeiro valor: ");
@@ -24,7 +24,8 @@ public class Ex5 {
             return calculomax(y,x);
         }else if(x >= y && x%y == 0){
             return y;
-        }else{
+        }
+        else{
             return calculomax(y, x%y);
         }
     }

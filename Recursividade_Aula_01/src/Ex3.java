@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Ex3 {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         try {
             System.out.println("Digite um numero: ");

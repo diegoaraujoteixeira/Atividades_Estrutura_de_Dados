@@ -25,7 +25,6 @@ public static int fatorial(int num) throws Exception{
     
     if((num == 1) || (num == 0)){
         return num;
-
     }
     else{
         for (int i = 1; i<=num; i++){

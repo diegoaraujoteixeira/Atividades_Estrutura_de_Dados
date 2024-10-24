@@ -6,9 +6,11 @@ public class Ex1Fibonacci {
         try{
             System.out.println("Digite um numero:");
             int x = sc.nextInt();
-    
-            long resultado1 = fibo(x);
-            System.out.println("O fibo de " + x + " e " + resultado1);
+
+            System.out.print("A sequencia de " + x + " é: ");
+            for (int i = 0; i < x; i++) {
+                System.out.print(fibo(i) + ", ");
+            }
            
         sc.close();
         }catch(Exception ex){
