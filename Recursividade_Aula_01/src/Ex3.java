@@ -5,7 +5,7 @@ public class Ex3 {
         Scanner sc = new Scanner(System.in);
         System.out.println("Digite um numero: ");
         int num = sc.nextInt();
-        if(primo(num,2)){
+        if(primo(num)){
             System.out.println(num + " é primo");
         }
         else{
@@ -13,6 +13,9 @@ public class Ex3 {
 
         }
         sc.close();
+    }
+    public static boolean primo(int x){
+        return primo(x,2);
     }
     public static boolean primo(int x, int div){
         if(x < 2){
