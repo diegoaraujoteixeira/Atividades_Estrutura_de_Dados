@@ -3,18 +3,23 @@ import java.util.Scanner;
 public class Ex3 {
     public static void main(String[] args) throws Exception {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Digite um numero: ");
-        int num = sc.nextInt();
-        if(primo(num)){
-            System.out.println(num + " é primo");
-        }
-        else{
-            System.out.println(num + " não é primo");
+        try {
+            System.out.println("Digite um numero: ");
+            int num = sc.nextInt();
+            if(primo(num)){
+                System.out.println(num + " é primo");
+            }
+            else{
+                System.out.println(num + " não é primo");
 
-        }
+             }
         sc.close();
+        } catch (Exception e) {
+            System.out.println("Caracter invalido");           
+        }
+        
     }
-    public static boolean primo(int x){
+    public static boolean primo(int x)throws Exception{
         return primo(x,2);
     }
     public static boolean primo(int x, int div){

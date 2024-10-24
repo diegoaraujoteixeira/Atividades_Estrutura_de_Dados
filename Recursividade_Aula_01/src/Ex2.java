@@ -3,13 +3,18 @@ import java.util.Scanner;
 public class Ex2 {
     public static void main(String[] args) throws Exception {
        Scanner sc = new Scanner(System.in);
+       try {
         System.out.println("Escreva o numero que vai ser a potencia: ");
-        double num = sc.nextDouble();
+        int num = sc.nextInt();
         double resultado = potencia(num);
         System.out.println("O fatorial de 2 elevado a " + num + " é " + resultado);
        sc.close();
+       } catch (Exception e) {
+        System.out.println("Caracter invalido");
     }
-    public static double potencia(double x){
+        
+    }
+    public static double potencia(double x)throws Exception{
         if(x == 0){
             return 1;
         }
