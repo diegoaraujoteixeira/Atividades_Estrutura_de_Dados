@@ -8,27 +8,29 @@ public class Ex3 {
         for (int i = 0; i < v.length; i++) {
             System.out.print(v[i] + " ");
         }
-        boolean a = vet(v, 101, f, c);
+        boolean a = vet(v, 1, c, f);
         if (a) {
-            System.out.println("Tem o numero");
+            System.out.println("o numero ta ai");
         }else{
             System.out.println("nao tem o numero");
-
         }
     }
-    public static boolean vet(int[]v , int x,  int f, int c){
-        if(c > f){
+
+    public static boolean vet(int[]v , int x,  int comeco, int finaal){
+        if(comeco > finaal){
             return false;
         }
-        int m = (c + f) / 2;
+        int m = (comeco + finaal) / 2;
         if(v[m] == x){
            return true;
         }
         else if(v[m] > x){
-           return vet(v, x, m + 1, f);
+            return  vet(v, x, comeco, m -1);
+
         }
         else{
-           return  vet(v, x, c, m -1);
+            return vet(v, x, m + 1, finaal);
+
         }
     }
 }
